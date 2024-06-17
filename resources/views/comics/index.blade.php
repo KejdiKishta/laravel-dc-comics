@@ -13,6 +13,7 @@
                         <small>{{ $item->series }}</small>
                     </div>
                     <a href="{{ route('comics.show', ['comic' => $item->id]) }}">Details</a>
+                    <a href="{{ route('comics.edit', ['comic' => $item->id]) }}">Edit</a>
                 </div>
             </div>
             @endforeach
