@@ -25,7 +25,7 @@ class StoreComicRequest extends FormRequest
             'title' => ['required', 'min:2', 'unique:App\Models\Comic,title'],
             'description' => ['max:255'],
             'price' => ['required'],
-            'series' => ['required', 'min:2']
+            'series' => ['required', 'min:2'],
         ];
     }
 
@@ -37,7 +37,7 @@ class StoreComicRequest extends FormRequest
     public function messages()
     {
         return [
-            'required' => 'I campi contrassegnati con * sono obbligatori!',
+            'required' => 'Questo campo è obbligatorio!',
             'title.unique' => 'Esiste già un articolo con questo titolo!',
             'min' => 'La lunghezza minima è di 2 caratteri',
             'description.max' => 'La descrizione non può superare i 255 caratteri',
